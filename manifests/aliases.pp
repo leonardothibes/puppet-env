@@ -10,6 +10,15 @@ class env::aliases
 		if $rm { create {'rm': command => 'rm -i'} } else { destroy {'rm':} }
 	}
 
+	define ls_colors($flag = false)
+	{
+		if $flag {
+			create {'ls': command => 'ls -h --color'}
+		} else {
+			destroy {'ls':}
+		}
+	}
+
 	define array($array = $title)
 	{
 		$items = split($array, '=')

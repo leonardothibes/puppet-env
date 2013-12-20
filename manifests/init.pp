@@ -21,6 +21,7 @@ class env(
 		rm => $rm_prompt,
 	}
 	env::aliases::array{$aliases:}
+	env::aliases::ls_colors{'ls': flag => $ls_colors}
 	# Creating aliases
 
 }
