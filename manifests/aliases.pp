@@ -10,6 +10,16 @@ class env::aliases
 		if $rm { create {'rm': command => 'rm -i'} } else { destroy {'rm':} }
 	}
 
+	define array($array = $title)
+	{
+		$items = split($array, '=')
+		if $items[1] == '' or $items[1] == 'false' {
+			destroy {$items[0]:}
+		} else {
+			create {$items[0]: command => $items[1]}
+		}
+	}
+
 	define create(
 		$file    = $title,
 		$command = '',

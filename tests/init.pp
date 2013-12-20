@@ -12,4 +12,6 @@ class {'env':
 	cp_prompt => true,
 	mv_prompt => true,
 	rm_prompt => true,
+	#aliases   => ["phing=clear ; phing","phpunit=clear ; phpunit"],
+	aliases   => ["phing=clear ; phing","phpunit=false"],
 }

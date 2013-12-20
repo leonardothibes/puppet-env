@@ -13,11 +13,14 @@ class env(
   $utils           = $env::params::utils,
 ) inherits env::params {
 
+	# Creating aliases
 	env::aliases::prompt {
 		'aliases-prompts':
 		cp => $cp_prompt,
 		mv => $mv_prompt,
 		rm => $rm_prompt,
 	}
+	env::aliases::array{$aliases:}
+	# Creating aliases
 
 }
