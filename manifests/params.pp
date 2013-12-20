@@ -11,4 +11,5 @@ class env::params
     home_chmod      = 755
 	dirs_in_home    = ['tmp']
 	aliases         = []
+	utils           = []
 }
