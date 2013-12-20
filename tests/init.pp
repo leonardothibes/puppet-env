@@ -8,4 +8,8 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include env
+class {'env':
+	cp_prompt => true,
+	mv_prompt => true,
+	rm_prompt => true,
+}
