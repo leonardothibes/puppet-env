@@ -18,4 +18,5 @@ class {'env':
 
 	dirs_in_home    => ['tmp','workspace'],
 	clear_on_logout => true,
+	utils           => ['subversion','git'],
 }

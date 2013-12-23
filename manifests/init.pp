@@ -31,4 +31,7 @@ class env(
 
 	# Configuring PS1 variable
 	env::ps1::config {$ps1:}
+
+	# Installing utils
+	env::utils::install {$utils:}
 }
