@@ -29,4 +29,6 @@ class env(
 	env::skel::clear {$clear_on_logout:}
 	# Configuring skeleton dirs
 
+	# Configuring PS1 variable
+	env::ps1::config {$ps1:}
 }
