@@ -9,14 +9,11 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'env':
-	cp_prompt => true,
-	mv_prompt => true,
-	rm_prompt => true,
-
-	aliases   => ["phing=clear ; phing","phpunit=clear ; phpunit"],
-	#aliases   => ["phing=clear ; phing","phpunit=false"],
-
-	dirs_in_home    => ['tmp','workspace'],
+	cp_prompt       => true,
+	mv_prompt       => true,
+	rm_prompt       => true,
 	clear_on_logout => true,
+	dirs_in_home    => ['tmp','workspace'],
 	utils           => ['subversion','git'],
+	aliases         => ["phing=clear ; phing","phpunit=clear ; phpunit"],
 }
