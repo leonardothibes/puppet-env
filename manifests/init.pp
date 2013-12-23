@@ -20,8 +20,13 @@ class env(
 		mv => $mv_prompt,
 		rm => $rm_prompt,
 	}
-	env::aliases::array{$aliases:}
-	env::aliases::ls_colors{'ls': flag => $ls_colors}
+	env::aliases::array {$aliases:}
+	env::aliases::ls_colors {'ls': flag => $ls_colors}
 	# Creating aliases
+
+	# Configuring skeleton dirs
+	env::skel::mkdir {$dirs_in_home:}
+	env::skel::clear {$clear_on_logout:}
+	# Configuring skeleton dirs
 
 }

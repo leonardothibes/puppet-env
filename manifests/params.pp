@@ -7,11 +7,12 @@ class env::params
 	$bash_completion = true
 	$clear_on_logout = true
 	$ps1             = '[\u@\h \W]'
-	$root_chmod      = 700
-    $home_chmod      = 755
 	$dirs_in_home    = ['tmp']
 	$utils           = []
 	$aliases         = []
 	$aliases_path    = '/etc/profile.d'
-
+	$skel_path       = '/etc/skel'
+    $home_chmod      = 755
+	$root_path       = '/root'
+	$root_chmod      = 700
 }
