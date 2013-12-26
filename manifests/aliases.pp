@@ -10,7 +10,7 @@ class env::aliases
 		if $rm { create {'rm': command => 'rm -i'} } else { destroy {'rm':} }
 	}
 
-	define ls_colors($flag = false)
+	define ls_colors($flag = $title)
 	{
 		if $flag {
 			create {'ls': command => 'ls -h --color'}
