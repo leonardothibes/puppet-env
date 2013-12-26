@@ -1,11 +1,11 @@
 class env::params
 {
-	$cp_prompt       = false
-	$mv_prompt       = false
-	$rm_prompt       = false
-	$ls_colors       = false
-	$bash_completion = false
-	$clear_on_logout = false
+	$cp_prompt       = true
+	$mv_prompt       = true
+	$rm_prompt       = true
+	$ls_colors       = true
+	$bash_completion = true
+	$clear_on_logout = true
 	$ps1             = '[\u@\h \W]'
 	$dirs_in_home    = ['tmp']
 	$utils           = []
