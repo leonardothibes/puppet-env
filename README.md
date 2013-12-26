@@ -17,6 +17,37 @@ node default {
 }
 ```
 
+Install env with prompt to cp/mv/rm commands:
+```puppet
+class {'env':
+    cp_prompt => true,
+    mv_prompt => true,
+    rm_prompt => true,
+}
+```
+
+Clearing screen on logout:
+```puppet
+class {'env':
+    clear_on_logout => true,
+}
+```
+
+Installing utils and creating directories in user's home:
+```puppet
+class {'env':
+    dirs_in_home  => ['tmp','workspace'],
+    utils         => ['subversion','git'],
+}
+```
+
+Creating aliases to some commands:
+```puppet
+class {'env':
+    aliases => ["phing=clear ; phing","phpunit=clear ; phpunit"],
+}
+```
+
 Contact
 -------
 
