@@ -14,6 +14,15 @@ class env::skel
 		}
 	}
 
+	define chmod($root, $skel)
+	{
+		exec {[
+			"chmod $root ${env::params::root_path}",
+			"chmod $skel ${env::params::skel_path}",
+			"chmod $skel /home/*",
+		]: path => '/bin'}
+	}
+
 	define clear($flag = $title)
 	{
 		$files = [

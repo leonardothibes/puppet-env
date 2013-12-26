@@ -21,12 +21,16 @@ class env(
 		rm => $rm_prompt,
 	}
 	env::aliases::array {$aliases:}
-	env::aliases::ls_colors {'ls': flag => $ls_colors}
+	env::aliases::ls_colors {$ls_colors:}
 	# Creating aliases
 
 	# Configuring skeleton dirs
 	env::skel::mkdir {$dirs_in_home:}
 	env::skel::clear {$clear_on_logout:}
+	env::skel::chmod {'chmod':
+		skel => $home_chmod,
+		root => $root_chmod,
+	}
 	# Configuring skeleton dirs
 
 	# Configuring PS1 variable
