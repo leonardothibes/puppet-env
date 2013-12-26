@@ -36,8 +36,8 @@ class {'env':
 Installing utils and creating directories in user's home:
 ```puppet
 class {'env':
-    dirs_in_home  => ['tmp','workspace'],
-    utils         => ['subversion','git'],
+    dirs_in_home => ['tmp','workspace'],
+    utils        => ['subversion','git'],
 }
 ```
 
