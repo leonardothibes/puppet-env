@@ -15,6 +15,6 @@ class {'env':
 	clear_on_logout => true,
 	home_chmod      => 700,
 	dirs_in_home    => ['tmp','workspace'],
-	utils           => ['subversion','git'],
+	utils           => ['git'],
 	aliases         => ["phing=clear ; phing","phpunit=clear ; phpunit"],
 }
