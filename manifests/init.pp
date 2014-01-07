@@ -20,7 +20,7 @@ class env(
 		mv => $mv_prompt,
 		rm => $rm_prompt,
 	}
-	env::aliases::array {$aliases:}
+	env::aliases::array     {$aliases:}
 	env::aliases::ls_colors {$ls_colors:}
 	# Creating aliases
 
