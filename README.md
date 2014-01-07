@@ -33,11 +33,18 @@ class {'env':
 }
 ```
 
-Installing utils and creating directories in user's home:
+Installing utils and creating directories in user's homes:
 ```puppet
 class {'env':
     dirs_in_home => ['tmp','workspace'],
     utils        => ['subversion','git'],
+}
+```
+
+Creating links in user's homes:
+```puppet
+class {'env':
+    link_in_home => ['workspace=/vagrant','www=/srv/www'],
 }
 ```
 
