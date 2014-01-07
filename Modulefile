@@ -1,6 +1,6 @@
 name    'leonardothibes-env'
 author  'leonardothibes'
-version '1.0.0'
+version '1.0.1'
 license 'MIT'
 summary 'A puppet module to provide a Redhat shell style for Debian/Ubuntu/Mint'
 description 'A puppet module to provide a Redhat shell style for Debian/Ubuntu/Mint'
