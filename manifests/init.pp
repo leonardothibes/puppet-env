@@ -9,6 +9,7 @@ class env(
   $root_chmod      = $env::params::root_chmod,
   $home_chmod      = $env::params::home_chmod,
   $dirs_in_home    = $env::params::dirs_in_home,
+  $link_in_home    = $env::params::link_in_home,
   $aliases         = $env::params::aliases,
   $utils           = $env::params::utils,
 ) inherits env::params {
@@ -25,6 +26,7 @@ class env(
 	# Creating aliases
 
 	# Configuring skeleton dirs
+	env::skel::link  {$link_in_home:}
 	env::skel::mkdir {$dirs_in_home:}
 	env::skel::clear {$clear_on_logout:}
 	env::skel::chmod {'chmod':

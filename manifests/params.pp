@@ -8,6 +8,7 @@ class env::params
 	$clear_on_logout = true
 	$ps1             = '[\u@\h \W]'
 	$dirs_in_home    = ['tmp']
+	$link_in_home    = []
 	$utils           = []
 	$aliases         = []
 	$aliases_path    = '/etc/profile.d'

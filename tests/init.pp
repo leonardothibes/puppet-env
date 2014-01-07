@@ -14,7 +14,8 @@ class {'env':
 	rm_prompt       => true,
 	clear_on_logout => true,
 	home_chmod      => 700,
-	dirs_in_home    => ['tmp','workspace'],
-	utils           => ['git'],
+	dirs_in_home    => ['tmp'],
+	link_in_home    => ['workspace=/vagrant'],
+	utils           => ['git','nmap'],
 	aliases         => ["phing=clear ; phing","phpunit=clear ; phpunit"],
 }
