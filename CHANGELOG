@@ -2,8 +2,8 @@
 ===========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (2):
-	* Resolvendo o problema de links indevidos fora da vm #2
-	* Implementando proteção contra declaração duplicada na instalação de pacotes #3
+  * Resolvendo o problema de links indevidos fora da vm #2
+  * Implementando proteção contra declaração duplicada na instalação de pacotes #3
 
 2014-01-07 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
 ===========================================================
