@@ -2,7 +2,9 @@ class env::utils
 {
 	define install($packages = $title)
 	{
-		package {$packages: ensure => latest}
+		if !defined(Package[$packages]) {
+			package {$packages: ensure => latest}
+		}
 	}
 
 	define uninstall($packages = $title)
