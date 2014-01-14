@@ -2,25 +2,28 @@ class env::skel
 {
 	define link($link = $title)
 	{
-		$items  = split($link, '=')
-		$fake   = $items[0]
-		$target = $items[1]
-		
-		$links = [
-			"${env::params::skel_path}/$fake",
-			"${env::params::root_path}/$fake",
+		$items    = split($link, '=')
+		$linkname = $items[0]
+		$target   = $items[1]
+		$links    = [
+			"${env::params::skel_path}/${linkname}",
+			"${env::params::root_path}/${linkname}",
 		]
 		
 		if $items[1] == '' or $items[1] == 'false' {
-			file {[$links,"/home/vagrant/${fake}"]: ensure => absent}
+			file {[$links,"/home/vagrant/${linkname}"]: ensure => absent}
 		} else {
 			file {$links:
 				ensure => link,
 				target => $target,
 			}
-			exec {"skel::link::vagrant::${fake}":
-				command => "[ -d /home/vagrant ] && ln -sf ${target} /home/vagrant/${fake}",
+			exec {"skel::link::vagrant::${linkname}":
+				command => "ln -sf ${target} /home/vagrant/${linkname}",
 				path    => ['/bin','/usr/bin'],
+				onlyif  => [
+					"test ! -L /home/vagrant/${linkname}",
+					'test -d /home/vagrant',
+				],
 			}
 		}
 	}
